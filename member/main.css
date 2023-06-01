@@ -1,0 +1,89 @@
+/*
+header tag의 background-color 와 color속성을 변경했더니
+ h1 tag,p tag로 구성된 Text 들의 속성이 같이 변경 되었다
+
+h1 tag p tag는 header tag가 감싸고 잇는 형태이다
+이때 header tag를 부모 tag라고 하고, h1과 p를 header tag child tag라고 한다
+
+부모 tag의 속성을 설정하면 child tag의 속성동 같이 변화된다(단,일부는 그렇지 않다)
+*/
+
+header {
+  background-color: green;
+  color: white;
+  text-align: center;
+  /*비율에 맞춰서 화면을 채워라 (1이면 1대1로 ) -> 화면에 맞는 여백을 주기 위한 작업*/
+  /* 화면에 여백, 글자 크기 box의 크기들을 표현할대 px,pt % 등의 단위를 사용한다
+  이 단위들은 보통 고정값으로 화면의 크기등을 고려하지 앟는 경우가 많다
+  rem(em)은 주변의 글자 크기에 따라서 비례적으로 단위를 적용한다. 기본값을 16px 대비
+  배율로 표현한다
+  ex) 1 rem : 16px
+      1.2 rem : (16*0.2)px
+  padding: 1rem;
+  */
+}
+
+/*
+nav tag 의 바탕색과 글자색을 변경했다
+이때 nav tag가 감싸고 있는 chile tag 에도 당연히 전파가 될것이라고 생각했다.
+그런데 nav tag의 child 인 a tag는 글자색이 변경되지 않았다
+
+이처럼 일부 부모의 속성을 상속받지 않는 tag들도 있다
+
+*/
+nav {
+  background-color: blanchedalmond;
+  color: black;
+}
+/*
+a tag는 특성상 부모의 color 속성을 상속 받지 않는다
+따라서 부모 tag color와 일치 시키기 위하여 a tag에 컬러 속성을 부모 tag color와 같게 해주어야한다
+
+그런데, 부모의 color를 변경할때마다 a tag의 color도 변경하는 번거루움이 있다
+
+이럴때는 color를 임의의 값으로 하지 않고 inherit키워드를 사용한다
+부모(nav) 의 color 속성을 변경하면 a tag의 color 속성도 같이 변경된다.
+*/
+a {
+  color: inherit;
+  text-decoration: none;
+  /*
+  a tag 는 기본속성 inline이다
+  보통 inline tag 는 margin과  padding, width, heigit등의 크기를 조절하는 속성이 잘 적용되지 않는다
+  그래서 a tag 에 margin, padding 등을 적용할때는 성질을 inline -block으로 변경해 주어야 한다
+  inline-block 성질은 inline이면서 box tag의 속성도 일부 같이 포함하는 성질을 갖게된다
+  
+  */
+  display: inline-block;
+  padding: 16px;
+  border: 1px solid red;
+}
+
+section {
+  border: 3px solid greenyellow;
+  margin: 10px;
+}
+
+article {
+  border: 3px solid goldenrod;
+  margin: 10px;
+}
+footer {
+  /*css 에서 색상값을 표현하는 방법
+    1. 색상 문자열을 사용하는 방법 -> color : white;
+    2. rgb() : 빛의 3원색을 0 ~255 까지 범위로 각각지정하여 색을 표현하는 방법
+    3. rgba() :  빛의 삼원색과 alpha값(투명도,opecity)를 각각 지정하여 색과 농도를 표현하는 방법
+    4. 16진수 문자열로 표현하는 방법
+       #RGB 색상을 16진수 문자열로 표현한다 각각 RGB는 00 ~ FF 까지 값을 갖는다
+    */
+  /*rgba()함수 사용하기*/
+  background-color: rgb(0, 0, 0, 0.3);
+  /*16진수 문자열로 표현하기*/
+  background-color: #63bfab;
+  background-color: #334455;
+  background-color: #345; /* 위에 코드와 동일한 색상*/
+  background-color: #555; /*값의 중간값은 모두 회색계열임*/
+
+  text-align: center;
+  padding: 10px;
+}
