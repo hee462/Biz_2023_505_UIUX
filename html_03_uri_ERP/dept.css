@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*
+html doc object는 기본 높이가 0이다 
+높이를 고려한 화면 layout을 만들려면 먼저 html doc object의 높이를 100%로 설정하자
+여기에서 100%라는 것은 browser의 view 영역 높이와 같게 맞추라는것이다
+
+그런데 html doc object 에 적용하는 100%의 의미가 
+브라우저 마다 조금씩 달라서 화면의 rayout이 무너지는 경우가 있다
+그래서 css2 이상에서는 html doc object에 height 와 width를  vh,vw단위를 사용하라
+
+view port란 디바이스에서 실제로  content를 보여주는 영역이라고 한다
+
+*/
+html {
+  height: 100vh;
+  width: 100vw;
+}
+/* html doc object를 기준으로 body size 설정*/
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/****************디바이스마다 맞춰 볼수있게 화면 기본 설정이라고 할 수 있음***********************/
+header.dept {
+  padding: 1.5rem;
+  background-color: rgb(35, 165, 35);
+}
+/*현재 dept_main.html dml nav ul li tag에 
+margin- left 를 부여하여 오른쪽 정렬을 시도했다
+그런데, 원하는대로 속성이 적용되지 않았다
+원인을 봤더니 main.css에서 nav tag에 flex를 적용한것이 dept_main.html의 nav 속성에 영향을 미친것이다
+다라서 nav의 display 속성을 원래 속성으로 block으로 되돌려주면 된다*/
+nav.dept {
+  background-color: rgb(165, 228, 92);
+  color: aliceblue;
+  display: block;
+}
+nav.dept ul {
+  margin-left: 30px;
+  /*ul tag의 머릿글 모양, disc,circle,square,none*/
+  /*nav 용도로 사용할때는 머릿글 모양을 보통 none으로 한다*/
+  list-style: none;
+  display: flex;
+  width: 100%;
+}
+nav.dept li {
+  padding: 12px 16px;
+  transition: 0.7s;
+}
+nav.dept li:hover {
+  cursor: pointer;
+  background-color: rgb(247, 139, 220);
+}
+nav.dept li:nth-of-type(6) {
+  margin-left: auto;
+}
+section.dept {
+  border: 1px solid blue;
+  flex: 1;
+  margin: 3px;
+  display: block;
+}
+section.dept:nth-of-type(1) {
+  overflow: auto;
+}
+/*
+block tag의 overflow 속성
+box 내부의 content가 box의 크기보다 클 경우
+content를 어떻게 표현할 것인가를 결정하는 속성
+hidden :  content를 box의 크기많큼만 남기고 잘라버리기
+scroll :  box에 scroll bar를 무조건 표현하고, 넘치면 scroll를 통하여 content를 볼수있게함
+auto :  content가 box 크기 맞춰서 표현됨 크기가 맞으면 평면 크면 자동으로 scroll형태로 변경
+*/
+section.dept:nth-of-type(2) {
+  overflow: auto;
+}
+section.dept:nth-of-type(3) {
+  overflow: hidden;
+}
+section.dept article {
+  overflow: auto;
+  height: 60%;
+}
+
+article.dept {
+  padding: 12px 16px;
+  /*box 내부에 포함된 box를 가로방향 중앙정렬하기*/
+  margin: 20px auto;
+}
+/*label input box 를 감싸고 있는 div*/
+article.dept div {
+  display: flex;
+  padding: 0 20px;
+}
+/*동일한값을 한꺼번에 줄때 `,`로 묶어서 사용*/
+article.dept label,
+article.dept input {
+  margin: 3px;
+  padding: 8px;
+}
+article.dept label {
+  /* width: 30px; */
+  text-align: right;
+  flex: 1;
+  color: aquamarine;
+  font-weight: bold;
+}
+/*위아래 width 값이 1:2 차이남으로 flex 값을 1:2 비율로 주면 동일한 효과볼수있음*/
+article.dept input {
+  /* width: 60%; */
+  flex: 2;
+  border-radius: 10px;
+  border: 1px solid #6d6565;
+  outline: none;
+}
+article.dept input:hover {
+  background-color: rgb(228, 236, 181);
+}
+article.dept input:focus {
+  background-color: rgb(247, 221, 332);
+}
+div.button_box lable {
+  flex: 1;
+}
+div.button_box div {
+  flex: 2;
+  text-align: left;
+  margin: 3px 0;
+  padding: 8px 0;
+}
+div.button_box button {
+  padding: 8px 16px;
+  margin: 8px 8px 8px 0;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+}
+div.button_box button:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+div.button_box button:nth-of-type(1) {
+  background-color: blue;
+  color: beige;
+}
+div.button_box button:nth-of-type(2) {
+  background-color: red;
+  color: beige;
+}
+div.button_box button:nth-of-type(3) {
+  background-color: black;
+  color: beige;
+}
