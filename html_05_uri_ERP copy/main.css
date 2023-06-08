@@ -1,0 +1,70 @@
+/*css 초기화 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*a코드 초기화*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/****header,nav, footer css 활용하여 작업해보기*****/
+header {
+  background-color: rgb(20, 105, 159);
+  color: white;
+  text-align: center;
+}
+nav {
+  background-color: rgb(224, 224, 224);
+  color: black;
+  display: flex;
+}
+nav a {
+  padding: 12px 16px 8px 16px;
+  border-bottom: 2px solid transparent;
+  margin: 7px 7px 5px 7px;
+  transition: 0.7s;
+}
+/*로그인부터 왼쪽정렬*/
+nav a:nth-of-type(6) {
+  margin-left: auto;
+}
+/*첫번째 태그에 왼쪽 여백 조금 주기*/
+nav a:first-of-type {
+  margin-left: 10px;
+}
+/*마지막 태그에 오른쪽 여백 조금 주기*/
+nav a:last-of-type {
+  margin-right: 10px;
+}
+/*마우스가 올라갔을대 라인그어주기*/
+nav a:hover {
+  border-bottom: 3px solid rgb(241, 241, 168);
+}
+section {
+  display: flex;
+}
+article {
+  flex: 1;
+  margin: 5px;
+  border: 1px solid green;
+}
+/*class 가 dash-title 인 p tag*/
+p.dash-title {
+  color: blue;
+  font-weight: bold;
+  transition: 0.7s;
+  padding: 5px;
+}
+p.dash-title:hover {
+  background-color: rgb(175, 197, 230);
+  cursor: pointer;
+}
+
+footer {
+  background-color: rgb(94, 94, 94);
+  color: white;
+  text-align: center;
+  padding: 0.7rem;
+}
