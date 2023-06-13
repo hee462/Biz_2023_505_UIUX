@@ -21,9 +21,22 @@ function func2() {
   console.log(num5 + num6);
 }
 func2();
+/*
+javascript 에서 변수를 선언하는 또다른 키워드
+var : 초기 js탄생시점에서 만들어진 키워드
+var를 사용하여 선언된 변수는 또 다시 선언될수 있다
 
-function func3() {
-  var num7 = 100;
-  var num8 = 200;
-}
+그 외에도 scope와 관련된 많은 issue가 있다
+따라서 현재의 js 코드에서는 var 키워드가 없다고 생각하자
+*/
+
+var num7 = 100;
+var num8 = 200;
+
+//   let num6 ="대한민국"
+//   let num6 ="우리나라"
+
+var num7 = "대한민국";
+var num8 = "우리나라";
+
 func3();

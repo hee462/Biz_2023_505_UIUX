@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*
+html 코드의 기본값 중에  font-size 화면의 보기 100%일때
+기본 font-size 는 16px이다
+html tag를 현재 문서의 root tag라고 한다
+
+
+
+*/
+html {
+  width: 100vw;
+  height: 100vh;
+  font-size: 30px;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+header {
+  /*
+    rem(root사이즈대비)
+    2rem은 html에 설정된 font-size의 2배 즉 32px
+    */
+  padding: 2rem;
+  background-image: url("./images/image1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: aliceblue;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+}
+header h1 {
+  /*h1 tag의 font-size의 2배*/
+  padding: 2em;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  background-color: #777;
+  color: aliceblue;
+}
+nav li {
+  margin: 5px;
+  padding: 3px;
+  border-bottom: 3px solid transparent;
+  transition: 0.8s;
+}
+nav li:hover {
+  border-bottom: 3px solid red;
+}
+nav li:first-of-type {
+  margin-left: 12px;
+}
+nav li:last-of-type {
+  margin-right: 12px;
+}
+
+nav li:nth-of-type(4) {
+  margin-left: auto;
+}
+section#main {
+  height: 300%;
+}

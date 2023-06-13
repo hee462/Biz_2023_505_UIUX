@@ -43,6 +43,11 @@ console.log(nation1, nation2);
 nation();
 console.log(nation1, nation2);
 
+/*
+외부에서 nation변수값을 매개변수로 전달받고, 함수 내부에서 사용하기(변경, 읽기)
+함수 내부에서 변경한 변수 값은 외부로 전파되지 않는다
+==> 순수함수
+*/
 const nationFunc = (nation) => {
   nation = "Republic of Korea";
 };

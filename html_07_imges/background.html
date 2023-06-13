@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ti</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        width: 100vw;
+        height: 100vh;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      div {
+        height: 100%;
+        width: 100%;
+        border: 2px solid blue;
+      }
+      div:nth-of-type(1) {
+        background-image: url("./images/image1.jpg");
+        /*배경이미지를 box 의 height, width의 100% 채우기*/
+        background-size: 100% 100%;
+        /*css2 에서css3진행하면서 기능이강화된 속성*/
+        background-attachment: fixed;
+      }
+      div:nth-of-type(2) {
+        background-image: url("./images/image2.jpg");
+        /*배경이미지를 box에 가득채움*/
+        background-size: contain;
+        background-attachment: fixed;
+      }
+      div:nth-of-type(3) {
+        background-image: url("./images/image3.jpg");
+        /*image가 box보다 작을때 size를 cover로 하고 repeat를 no-repeat로 해주면 
+        box 크기 만큼 이미지를 늘려서 가득채우기*/
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+      }
+      div:nth-of-type(4) {
+        background-image: url("./images/image4.jpg");
+        background-size: 100% 200%;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </body>
+</html>
