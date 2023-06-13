@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.phone_size {
+  /* border: 1px solid black; */
+  height: 600px;
+  width: 1000px;
+  margin: 100px auto 0;
+}
+body {
+  text-align: center;
+}
+div {
+  background-color: #f5f0bb;
+}
+
+h2 {
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 40px 400px;
+}
+/* #schedule_form {
+  position: fixed;
+} */
+#schedule_form input {
+  background: none;
+  width: 200px;
+  color: white;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 14px 12px;
+  outline: none;
+  color: black;
+}
+#schedule_form input:focus {
+  width: 280px;
+  border-color: #73a9ad;
+}
+#button {
+  border: 2px solid gray;
+  margin: 20px auto;
+  padding: 14px 10px;
+  border-radius: 10px;
+  display: block;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  width: 200px;
+}
+#login_form button:hover {
+  background-color: #2ecc71;
+}

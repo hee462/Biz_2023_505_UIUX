@@ -14,7 +14,7 @@ html tag를 현재 문서의 root tag라고 한다
 html {
   width: 100vw;
   height: 100vh;
-  font-size: 30px;
+  font-size: 16px;
 }
 body {
   width: 100%;
@@ -26,17 +26,19 @@ header {
     2rem은 html에 설정된 font-size의 2배 즉 32px
     */
   padding: 2rem;
+  /* height: 50%; */
   background-image: url("./images/image1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   color: aliceblue;
   text-shadow: 2px 2px 2px black;
   text-align: center;
 }
 header h1 {
   /*h1 tag의 font-size의 2배*/
-  padding: 2em;
+  padding: 1em;
 }
 nav ul {
   list-style: none;
