@@ -40,14 +40,14 @@ h2 {
   border-color: #73a9ad;
 }
 #button {
-  border: 2px solid gray;
+  border: 2px solid #f8f1ff;
   margin: 20px auto;
   padding: 14px 10px;
   border-radius: 10px;
   display: block;
   outline: none;
   cursor: pointer;
-  background: none;
+  background: #f8f1ff;
   width: 200px;
 }
 #login_form button:hover {
