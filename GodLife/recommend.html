@@ -9,40 +9,36 @@
 </head>
 <body>
   <div class="phone_size">
-    <div class="title">챌리지에 도전하세요!</div>
-<form action="#">
-  <label for="challenge">도전과제</label>
-  <select name="challenge" >
-    <option value="water">물 1L마시기</option>
-    <option value="zero">무지출 챌린지</option>
-    <option value="book">책읽기</option>
-    <option value="exercise">운동 30분</option>
-    <option value="diary">일기쓰기</option>
-    <option value="blanket">침구정리</option>
-    <option value="running">런닝하기</option>
-  </select>
+    <h3>챌리지에 도전하세요!</h3>
+    <div class="challenge_box">
+
+      <div class="challenge">물 1L마시기</div>
+      <div class="challenge">무지출 챌린지</div>
+      <div class="challenge">책읽기</div>
+      <div class="challenge">일기쓰기</div>
+      <div class="challenge">침구정리</div>
+      <div class="challenge">런닝하기</div>
+    </div>
+    
   <br>
-  <button type="submit">추가하기</button>
-</form>
+  <button type="button" class="box_add">추가하기</button>
+
 <div class="item">
   <input class="item" placeholder="목표를 입력하세요"></input>
-  <button type="button">+</button>
-</div>
-<div>
+  <button type="button" class="add">+</button>
+  <br>
+  <!-- <input class="item" placeholder="목표를 입력하세요"></input>
+  <button type="button"class="add">+</button>
+  <br>
   <input class="item" placeholder="목표를 입력하세요"></input>
-  <button type="button">+</button>
+  <button type="button"class="add">+</button> -->
 </div>
-<div>
-  <input class="item" placeholder="목표를 입력하세요"></input>
-  <button type="button">+</button>
-</div>
-<div>
-  <button type="submit">저장하기</button>
-  <button type="reset"> 다시적기</button>
+  <button type="submit" class="box_save" >수정하기</button>
+  <button type="reset" class="box_reset" >저장하기</button>
+  <!-- <button id="menu">+</button> -->
+  <br>
+  <button class="skip">skip</button>
 </div>
   
 </body>
-<footer>
-  <button>skip</button>
-</footer>
 </html>

@@ -11,8 +11,6 @@
 }
 body {
   text-align: center;
-}
-div {
   background-color: #f5f0bb;
 }
 
@@ -38,6 +36,9 @@ h2 {
 #schedule_form input:focus {
   width: 280px;
   border-color: #73a9ad;
+}
+button.add {
+  width: 10px;
 }
 #button {
   border: 2px solid #f8f1ff;

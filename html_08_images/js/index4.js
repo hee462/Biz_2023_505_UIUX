@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
   //     alert(`${pos} 번째 이미지`);
   //   };
   let slideIndex = 0;
-
   document
     .querySelector("div.controller_box")
     ?.addEventListener("click", (e) => {
@@ -76,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (++slideIndex > images.length - 1) slideIndex = 0;
       } else if (className.contains("badge")) {
         // alert("뱃지 클리됨");
-        //span tag data-id값 가져오기
+        //span tag data-id값 가져오기-> dataset.id로 사용해서 가져옴
         const id = Number(target.dataset.id);
         slideIndex = id - 1;
       } // if end
