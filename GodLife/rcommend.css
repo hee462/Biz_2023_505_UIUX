@@ -17,7 +17,7 @@ h3 {
   font-size: 50px;
 }
 div.challenge_box {
-  border: 1px solid black;
+  border: none;
   margin-top: 50px;
   padding-left: 100px;
   padding-right: 100px;
@@ -39,6 +39,7 @@ button.add {
   width: 30px;
   height: 30px;
   font-size: 20px;
+  position: relative;
   border: none;
 }
 button.add:hover {
@@ -84,4 +85,8 @@ button#menu {
   color: #575757;
   margin-bottom: 50px;
   margin-left: 500px;
+}
+div.up,
+div.down {
+  border: 1px solid #575757;
 }
