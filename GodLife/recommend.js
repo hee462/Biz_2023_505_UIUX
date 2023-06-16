@@ -1,18 +1,20 @@
+const DIV_INDEX = {
+  WATER: 0,
+  ZERO: 1,
+  BOOK: 2,
+  DAIRY: 3,
+  BEDDING: 4,
+  RUNNING: 5,
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  function setChallenge() {
-    const element = document.getElementById("challenge_water");
-    alert(element);
-    // element.innerHTML = "<div>물마시기</div>";
-  }
+  const challenge = () => {
+    const challenge_item = document.querySelectorAll("#challenge_box div");
+    const challenge_click = (event) => {
+      const target = event.target;
+      const div_text = target.innerText;
+      alert(div_text);
+    };
+  };
+  challenge_item?.addEventListener("click", challenge_click);
 });
-// const box_add = function () {};
-
-// $(document).ready(function () {
-//   var i = 1; // 변수설정은 함수의 바깥에 설정!
-//   $("button").click(function (event) {
-//     alert("!");
-//     // $("#box_add").append("<button class='item'>등장\"+i+\"</button>");
-
-//     i++; // 함수 내 하단에 증가문 설정
-//   });
-// });
