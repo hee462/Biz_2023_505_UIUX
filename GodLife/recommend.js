@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const challenge_click = (event) => {
       const target = event.target;
       const div_text = target.innerText;
-      alert(div_text);
     };
   };
   challenge_item?.addEventListener("click", challenge_click);

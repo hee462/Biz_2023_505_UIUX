@@ -207,6 +207,12 @@ div.challenge_box {
   margin-left: 100px;
   height: 130px;
 }
+div.challenge_box :hover {
+  font-size: 25px;
+  background-color: #fdefc2;
+  border-radius: 15px;
+}
+
 div.challenge1,
 div.challenge {
   /* border: 1px solid rebeccapurple; */
@@ -215,6 +221,7 @@ div.challenge {
   font-size: 20px;
   margin-left: 150px;
 }
+
 div.challenge {
   position: relative;
   transform: translate(150%, -300%);
@@ -224,9 +231,14 @@ div#box_add {
   margin-bottom: 15px;
   /* padding-bottom: 250px; */
 }
-div.item_box {
+div#item_box {
   /* border: 6px solid red; */
 }
+input::placeholder {
+  color: #575757;
+  font-size: 18px;
+}
+
 input.item {
   border-radius: 10px;
   width: 300px;

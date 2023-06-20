@@ -22,6 +22,9 @@ div.challenge_box {
   padding-left: 100px;
   padding-right: 100px;
 }
+div.challenge_box :hover {
+  background-color: #575757;
+}
 
 input.item {
   border-radius: 10px;
