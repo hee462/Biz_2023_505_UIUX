@@ -198,11 +198,8 @@ body {
   top: -10%;
   left: -10%;
 }
-/*  
-    !!!!!테이블!!!!*
-   */
 
-h2 {
+h3 {
   font-size: 4em;
   font-weight: 300;
   text-align: center;
